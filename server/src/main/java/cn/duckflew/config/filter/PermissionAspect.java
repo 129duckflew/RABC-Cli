@@ -33,7 +33,8 @@ public class PermissionAspect
     {
         log.debug("开始校验操作权限");
         SessionUserInfo userInfo = tokenService.getUserInfo();
-        Set<String> userInfoPermissionList = userInfo.getPermissionList();//权限列表
+        //权限列表
+        Set<String> userInfoPermissionList = userInfo.getPermissionList();
         Signature signature = joinPoint.getSignature();
         MethodSignature methodSignature= (MethodSignature) signature;
         RequiresPermissions annotationOnMethod=methodSignature.getMethod().getAnnotation(RequiresPermissions.class);

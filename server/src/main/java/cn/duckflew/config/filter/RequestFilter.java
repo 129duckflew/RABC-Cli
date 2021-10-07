@@ -17,6 +17,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Administrator
+ * 解析token 从缓存里面查询出用户信息
+ */
 @Component
 @Slf4j
 public class RequestFilter extends OncePerRequestFilter implements Filter
@@ -28,6 +32,7 @@ public class RequestFilter extends OncePerRequestFilter implements Filter
     {
         try
         {
+            log.debug("请求过滤器！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！");
             setUsername(req);
             filterChain.doFilter(req,resp);
         }
@@ -38,6 +43,7 @@ public class RequestFilter extends OncePerRequestFilter implements Filter
         finally
         {
             MDC.clear();
+            log.debug("MDC清空了！！！！！！！！！！！！！");
         }
     }
 
