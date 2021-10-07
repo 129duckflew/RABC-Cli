@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: local
+  datasource:
+    username: root
+    password: znzedushangzhe
+    url: jdbc:mysql://localhost:3306/shiro?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    password: 123456
+    database: 0
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
