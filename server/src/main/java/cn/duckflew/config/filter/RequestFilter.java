@@ -29,7 +29,6 @@ public class RequestFilter extends OncePerRequestFilter implements Filter
         try
         {
             setUsername(req);
-
             filterChain.doFilter(req,resp);
         }
         catch (Exception e)
