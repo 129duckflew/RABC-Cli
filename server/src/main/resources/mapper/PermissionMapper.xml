@@ -18,12 +18,12 @@
     </sql>
 
     <select id="getAllPerCodes" resultType="java.lang.String">
-        select distinct  menu_code from sys_permission;
+        select distinct  permission_code from sys_permission;
     </select>
 
     <select id="getAllMenuCodes" resultType="java.lang.String">
 
-    select distinct permission_code from sys_permission;
+    select distinct menu_code  from sys_permission;
     </select>
 
 </mapper>
