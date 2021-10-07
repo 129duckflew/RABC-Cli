@@ -17,4 +17,8 @@ public class CommonJsonException extends RuntimeException
         this.resJson = resultJson;
     }
 
+    public JSONObject getResJson()
+    {
+        return resJson;
+    }
 }
