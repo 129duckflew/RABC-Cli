@@ -3,11 +3,9 @@ package cn.duckflew.service;
 import cn.duckflew.config.exception.CommonJsonException;
 import cn.duckflew.dao.LoginMapper;
 import cn.duckflew.dao.PermissionMapper;
-import cn.duckflew.po.Permission;
 import cn.duckflew.util.StringTools;
 import cn.duckflew.util.constants.ErrorEnum;
 import cn.duckflew.vo.SessionUserInfo;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,11 +42,13 @@ public class TokenService
         ValueOperations ops = redisTemplate.opsForValue();
         SessionUserInfo userInfo= getUserInfoByUsername(username);
         ops.set(token,userInfo, Duration.ofDays(3));
+        log.info("设置用户信息缓存:token={} , username={}, info={}", token, username, userInfo);
     }
 
     private SessionUserInfo getUserInfoByUsername(String username)
     {
         SessionUserInfo sessionUserInfo=loginMapper.getUserInfo(username);
+
         if (sessionUserInfo.getRoleIds().contains(1))
         {
             sessionUserInfo.setPermissionList(permissionMapper.getAllPerCodes());
@@ -60,6 +60,9 @@ public class TokenService
     public SessionUserInfo getUserInfo()
     {
         String token = MDC.get("token");
+        log.debug("token");
+        log.debug("=================");
+        log.debug(token);
         return getUserInfoFromCache(token);
     }
 
