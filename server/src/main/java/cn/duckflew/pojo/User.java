@@ -1,4 +1,4 @@
-package cn.duckflew.po;
+package cn.duckflew.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author duckflew
- * @since 2021-10-04
+ * @since 2021-10-08
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
