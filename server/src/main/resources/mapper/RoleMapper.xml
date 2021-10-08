@@ -3,7 +3,7 @@
 <mapper namespace="cn.duckflew.dao.RoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.duckflew.po.Role">
+    <resultMap id="BaseResultMap" type="cn.duckflew.pojo.Role">
         <id column="id" property="id" />
         <result column="role_name" property="roleName" />
         <result column="create_time" property="createTime" />

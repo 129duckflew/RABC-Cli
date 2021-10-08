@@ -39,7 +39,7 @@ public class Generator {
         System.out.println(help.toString());
         if (scanner.hasNext()) {
             String ipt = scanner.next();
-            if (StringUtils.isNotEmpty(ipt)) {
+            if (StringUtils.isNotBlank(ipt)) {
                 return ipt;
             }
         }
@@ -79,7 +79,7 @@ public class Generator {
         PackageConfig pc = new PackageConfig();
         pc.setParent("cn.duckflew")
                 .setEntity("pojo")
-                .setMapper("mapper")
+                .setMapper("dao")
                 .setServiceImpl("service")
                 .setController("controller");
         mpg.setPackageInfo(pc);

@@ -1,6 +1,6 @@
 package cn.duckflew.dao;
 
-import cn.duckflew.po.Role;
+import cn.duckflew.pojo.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
