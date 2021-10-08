@@ -1,6 +1,6 @@
 package cn.duckflew.dao;
 
-import cn.duckflew.po.Permission;
+import cn.duckflew.pojo.Permission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.Set;
