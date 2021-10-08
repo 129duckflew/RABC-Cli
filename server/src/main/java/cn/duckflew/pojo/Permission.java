@@ -1,4 +1,4 @@
-package cn.duckflew.po;
+package cn.duckflew.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;

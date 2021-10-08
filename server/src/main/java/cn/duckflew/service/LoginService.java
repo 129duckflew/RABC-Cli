@@ -2,7 +2,7 @@ package cn.duckflew.service;
 
 import cn.duckflew.config.exception.CommonJsonException;
 import cn.duckflew.dao.LoginMapper;
-import cn.duckflew.po.User;
+import cn.duckflew.pojo.User;
 import cn.duckflew.util.CommonUtils;
 import cn.duckflew.util.constants.ErrorEnum;
 import cn.duckflew.vo.SessionUserInfo;

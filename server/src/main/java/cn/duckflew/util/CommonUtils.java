@@ -42,6 +42,10 @@ public class CommonUtils
         return jsonObject;
     }
 
+    public static JSONObject successJson()
+    {
+      return   successJson(new JSONObject());
+    }
     public static JSONObject successJson(Object info)
     {
         JSONObject jsonObject = new JSONObject();

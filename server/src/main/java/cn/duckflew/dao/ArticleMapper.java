@@ -1,6 +1,6 @@
 package cn.duckflew.dao;
 
-import cn.duckflew.po.Article;
+import cn.duckflew.pojo.Article;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

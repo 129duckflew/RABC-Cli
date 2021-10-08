@@ -3,7 +3,7 @@
 <mapper namespace="cn.duckflew.dao.PermissionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.duckflew.po.Permission">
+    <resultMap id="BaseResultMap" type="cn.duckflew.pojo.Permission">
         <id column="id" property="id" />
         <result column="menu_code" property="menuCode" />
         <result column="menu_name" property="menuName" />

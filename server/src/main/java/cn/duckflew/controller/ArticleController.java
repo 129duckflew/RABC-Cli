@@ -1,7 +1,7 @@
 package cn.duckflew.controller;
 
 import cn.duckflew.config.annotation.RequiresPermissions;
-import cn.duckflew.po.Article;
+import cn.duckflew.pojo.Article;
 import cn.duckflew.service.ArticleService;
 import cn.duckflew.util.CommonUtils;
 import com.alibaba.fastjson.JSONObject;

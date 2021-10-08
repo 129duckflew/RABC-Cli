@@ -1,47 +1,49 @@
-package cn.duckflew.po;
+package cn.duckflew.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 /**
  * <p>
- * 文章表
+ * 后台角色表
  * </p>
  *
  * @author duckflew
- * @since 2021-10-07
+ * @since 2021-10-05
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Article对象", description="文章表")
-public class Article implements Serializable {
+@TableName("sys_role")
+@ApiModel(value="Role对象", description="后台角色表")
+public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty(value = "文章内容")
-    private String content;
+    @ApiModelProperty(value = "角色名")
+    @TableField("role_name")
+    private String roleName;
 
-    @ApiModelProperty(value = "创建时间")
     @TableField("create_time")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "更新时间")
     @TableField("update_time")
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "是否有效  1.有效  2无效")
+    @ApiModelProperty(value = "是否有效  1有效  2无效")
     @TableField("delete_status")
     private String deleteStatus;
 

@@ -1,7 +1,7 @@
 package cn.duckflew.service;
 
 import cn.duckflew.dao.ArticleMapper;
-import cn.duckflew.po.Article;
+import cn.duckflew.pojo.Article;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
