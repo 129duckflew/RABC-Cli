@@ -5,7 +5,7 @@ spring:
     active: local
   datasource:
     username: root
-    password: znzedushangzhe
+    password: 123456
     url: jdbc:mysql://localhost:3306/shiro?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
   cache:
     type: redis
